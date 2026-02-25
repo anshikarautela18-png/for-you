@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For You 🤍</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe6ee, #fff);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      max-width: 400px;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+    h1 {
+      color: #e75480;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #444;
+      line-height: 1.6;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      background: #e75480;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #d9436c;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hey ❤️</h1>
+    <p id="message">
+      I just wanted you to know that you matter to me.
+      Even on quiet days, you’re important.
+    </p>
+    <button onclick="changeMessage()">Click me</button>
+  </div>
+
+  <script>
+    const messages = [
+      "I love you so much utri jii🤍",
+      " You are the best thing that has ever happened to me ☀️",
+      "I will always choose and love you 🌸",
+      "This is my little coding hug along with lots of kisses 🫂",
+      "No matter what, you matter to me the most 💫"
+    ];
+
+    function changeMessage() {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").innerText = messages[randomIndex];
+    }
+  </script>
+</body>
+</html>
